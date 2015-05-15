@@ -1,0 +1,42 @@
+{
+  "name": "availity-limo",
+  "version": "1.0.0",
+  "description": "Shared code across Availity projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Availity/availity-limo.git"
+  },
+  "keywords": [
+    "availity",
+    "shared",
+    "gulp",
+    "tasks"
+  ],
+  "authors": [
+    {
+      "name": "Rob Warner",
+      "email": "rob.warner@availity.com",
+      "url": "http://www.availity.com"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "gulp": "^3.8.11",
+    "gulp-if": "^1.2.5",
+    "gulp-jscs": "^1.4.0",
+    "gulp-jshint": "^1.9.2",
+    "gulp-less": "^3.0.1",
+    "gulp-using": "0.0.1",
+    "gulp-util": "^3.0.3",
+    "jshint-stylish": "^1.0.0",
+    "lodash": "^3.3.0",
+    "minimist": "^1.1.0",
+    "moment": "^2.9.0",
+    "require-dir": "^0.1.0"
+  }
+}
