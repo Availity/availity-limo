@@ -8,8 +8,8 @@ _.forEach(tasks, function(task) {
   try {
     var result = /gulp\.task\(['"](.*)['"]/m.exec(task.toString());
     var taskName = (result && result.length > 1) ? result[1] : 'unknown';
-    logger.info(config, 'task added: ' + taskName);
     task(gulp, config);
+    logger.info(config, 'task added: ' + taskName);
   } catch (err) {
     logger.warn('task skipped: ' + taskName + '; ' + err);
   }

@@ -1,8 +1,12 @@
 var argv = require('minimist')(process.argv.slice(2));
+var path = require('path');
 
 module.exports = {
   args: {
     verbose: !!argv.verbose
+  },
+  project: {
+    path: path.resolve(__dirname, '.')
   },
   verb: {
     src: ['docs/readme/readme.config.md'],

@@ -1,11 +1,9 @@
 var gUtil = require('gulp-util');
 var chalk = require('chalk');
-var util = require('util');
 
 var prefix = chalk.yellow('[availity]');
 
-var log = function(color, args) {
-  var message = util.format.apply(util, args);
+var log = function(color, message) {
   message = chalk[color](message);
   message = [prefix, message].join(' ');
   gUtil.log(message);
@@ -13,22 +11,20 @@ var log = function(color, args) {
 
 var logger = {};
 
-logger.info = function(config, args) {
+logger.info = function(config, message) {
   if (!config.args.verbose) {
     return;
   }
-  args = Array.prototype.slice.call(args);
-  log('blue', args);
+  //var args = Array.prototype.slice.call(arguments);
+  log('blue', message);
 };
 
-logger.warn = function() {
-  var args = Array.prototype.slice.call(arguments);
-  log('yellow', args);
+logger.warn = function(message) {
+  log('yellow', message);
 };
 
-logger.error = function() {
-  var args = Array.prototype.slice.call(arguments);
-  log('red', args);
+logger.error = function(message) {
+  log('red', message);
 };
 
 module.exports = logger;
