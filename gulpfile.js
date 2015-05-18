@@ -6,7 +6,7 @@ var config = require('./config');
 
 _.forEach(tasks, function(task) {
   try {
-    var result = /gulp\.task\(['"](.*)['"]/m.exec(task.toString());
+    var result = /gulp\.task\(['"](.*?)['"]/m.exec(task.toString());
     var taskName = (result && result.length > 1) ? result[1] : 'unknown';
     task(gulp, config);
     logger.info(config, 'task added: ' + taskName);
