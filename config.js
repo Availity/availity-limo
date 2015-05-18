@@ -14,7 +14,12 @@ module.exports = {
     dest: './'
   },
   js: {
-    src: ['gulpfile.js', 'tasks/*.js', 'utils/*.js']
+    src: ['gulpfile.js', 'tasks/*.js', 'utils/*.js'],
+    jshintrc: './.jshintrc'
+  },
+  lib: {
+    targets: '',
+    jshintrc: './.jshintrc'
   },
   test: {
     src: ['./test/**/*.js']

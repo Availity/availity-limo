@@ -66,7 +66,7 @@ module.exports = function(gulp, config) {
   });
 
   gulp.task('av:build:docs', function() {
-    var sortComponents = nil;
+    var sortComponents;
     if(config.docs.sort.components !== null && config.docs.sort.components !== undefined && config.docs.sort.components !== '') {
       sortComponents = new Sort(config.docs.sort.components);
     }

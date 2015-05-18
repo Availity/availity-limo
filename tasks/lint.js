@@ -3,6 +3,8 @@ module.exports = function(gulp, config) {
   var stylish = require('jshint-stylish');
   var jscs = require('gulp-jscs');
 
+  gulp.task('av:lint', ['av:lint:js', 'av:lint:lib']);
+
   gulp.task('av:lint:js', function() {
     gulp.src(config.js.src)
       .pipe(jscs())
