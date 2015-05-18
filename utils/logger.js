@@ -12,11 +12,9 @@ var log = function(color, message) {
 var logger = {};
 
 logger.info = function(config, message) {
-  if (!config.args.verbose) {
-    return;
+  if (config && config.args && config.args.verbose) {
+    log('blue', message);
   }
-  //var args = Array.prototype.slice.call(arguments);
-  log('blue', message);
 };
 
 logger.warn = function(message) {
