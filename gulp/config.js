@@ -13,7 +13,7 @@ module.exports = {
     dest: './'
   },
   packages: {
-    src: ['../package.json', '../bower.json', '../README.md']
+    src: ['package.json', 'bower.json']
   },
   js: {
     src: ['gulpfile.js', 'gulp/**/*.js', 'src/**/*.js'],
