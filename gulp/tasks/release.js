@@ -26,13 +26,14 @@ module.exports = function(gulp, config) {
               'none (exit)'
             ]
           }, function(res) {
-            var type = null;
             if(res.bump.match(/^patch/)) {
               type = 'patch';
             } else if(res.bump.match(/^minor/)) {
               type = 'minor';
             } else if(res.bump.match(/^major/)) {
               type = 'major';
+            } else {
+              type = null;
             }
             if (type) {
               gulp.start('release:sequence');
