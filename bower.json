@@ -1,6 +1,6 @@
 {
-  "name": "availity-limo", 
-  "version": "0.1.0",
+  "name": "availity-limo",
+  "version": "0.1.1",
   "description": "Shared Availity code",
   "license": "MIT",
   "keywords": [
@@ -8,9 +8,7 @@
     "shared"
   ],
   "main": "index.js",
-  "ignore": [
-  ],
+  "ignore": [],
   "dependencies": {},
   "devDependencies": {}
 }
-
