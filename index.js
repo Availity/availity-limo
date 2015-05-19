@@ -16,7 +16,7 @@ module.exports = function(gulp, config) {
       logger.info(config, 'task added: ' + taskName);
     } catch (err) {
       if (config.args && config.args.verbose) {
-        logger.warn('task skipped: ' + taskName);
+        logger.warn('task skipped: ' + taskName + '; ' + err);
       }
     }
   });
