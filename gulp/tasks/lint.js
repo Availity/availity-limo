@@ -4,26 +4,35 @@ module.exports = function(gulp, config) {
   var jscs = require('gulp-jscs');
   var logger = require('../utils/logger');
 
-  gulp.task('av:lint', function() {
-    if (config && config.js && config.js.jshintrc) {
-      var src = [];
-      if (config && config.js && config.js.src) {
-        src = src.concat(config.js.src);
-      }
-      if (config && config.lib && config.lib.src) {
-        src = src.concat(config.lib.src);
-      }
+  gulp.task('av:lint', ['av:lint:js', 'av:lint:lib']);
 
-      if (src.length > 0) {
-        gulp.src(src)
+  gulp.task('av:lint:js', function() {
+    if (config && config.js && config.js.src) {
+      if (config && config.js && config.js.jshintrc) {
+        gulp.src(config.js.src)
           .pipe(jscs())
           .pipe(jshint(config.js.jshintrc))
           .pipe(jshint.reporter(stylish));
       } else {
-        logger.error('You must define config.js.src and/or config.lib.src.');
+        logger.error('You must define config.js.jshintrc.');
       }
     } else {
-      logger.error('You must define config.js.jshintrc');
+      logger.warn('config.js.src not defined; skipping.');
+    }
+  });
+
+  gulp.task('av:lint:lib', function() {
+    if (config && config.lib && config.lib.src) {
+      if (config && config.lib && config.lib.jshintrc) {
+        gulp.src(config.lib.src)
+          .pipe(jscs())
+          .pipe(jshint(config.lib.jshintrc))
+          .pipe(jshint.reporter(stylish));
+      } else {
+        logger.error('You must define config.lib.jshintrc.');
+      }
+    } else {
+      logger.warn('config.lib.src not defined; skipping.');
     }
   });
 };
