@@ -1,6 +1,6 @@
 {
   "name": "availity-limo",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Shared code across Availity projects",
   "main": "index.js",
   "scripts": {
