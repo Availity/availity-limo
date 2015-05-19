@@ -16,7 +16,7 @@ module.exports = {
     src: ['package.json', 'bower.json']
   },
   js: {
-    src: ['gulpfile.js', 'gulp/**/*.js', 'src/**/*.js'],
+    src: ['gulpfile.js', 'gulp/**/*.js'],
     jshintrc: './.jshintrc'
   },
   dotfiles: {
