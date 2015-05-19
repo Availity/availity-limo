@@ -9,7 +9,7 @@ module.exports = function(gulp, config) {
     var git = require('gulp-git');
     var filter = require('gulp-filter');
     var tagVersion = require('gulp-tag-version');
-    var pkg = require(config.project.path + '/../package.json'); // this needs to be relative to the path of the project it is running from
+    var pkg = require(config.project.path + '/package.json'); // this needs to be relative to the path of the project it is running from
     var type = 'patch';
 
     gulp.task('av:release', function() {

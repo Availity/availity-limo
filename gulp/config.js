@@ -6,7 +6,7 @@ module.exports = {
     verbose: !!argv.verbose
   },
   project: {
-    path: path.resolve(__dirname, '.')
+    path: path.resolve(__dirname, '..')
   },
   readme: {
     src: ['docs/readme/readme.config.md'],
