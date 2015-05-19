@@ -1,8 +1,8 @@
 module.exports = function(gulp, config) {
 
-  var logger = require('./utils/logger');
+  var logger = require('./gulp/utils/logger');
   var _ = require('lodash');
-  var tasks = require('require-dir')('./tasks', {recurse: true});
+  var tasks = require('require-dir')('./gulp/tasks', {recurse: true});
 
   if (!config.args) {
     logger.error('config.args not defined');

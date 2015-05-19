@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 var _ = require('lodash');
-var logger = require('./utils/logger');
-var tasks = require('require-dir')('./tasks', { recurse: true });
-var config = require('./config');
+var logger = require('./gulp/utils/logger');
+var tasks = require('require-dir')('./gulp/tasks', { recurse: true });
+var config = require('./gulp/config');
 
 _.forEach(tasks, function(task) {
   try {

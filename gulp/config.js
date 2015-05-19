@@ -8,21 +8,16 @@ module.exports = {
   project: {
     path: path.resolve(__dirname, '.')
   },
-  verb: {
+  readme: {
     src: ['docs/readme/readme.config.md'],
-    name: 'README.md',
     dest: './'
   },
+  packages: {
+    src: ['../package.json', '../bower.json', '../README.md']
+  },
   js: {
-    src: ['gulpfile.js', 'tasks/*.js', 'utils/*.js'],
+    src: ['gulpfile.js', 'gulp/**/*.js', 'src/**/*.js'],
     jshintrc: './.jshintrc'
-  },
-  lib: {
-    targets: '',
-    jshintrc: './.jshintrc'
-  },
-  test: {
-    src: ['./test/**/*.js']
   },
   dotfiles: {
     src: [
